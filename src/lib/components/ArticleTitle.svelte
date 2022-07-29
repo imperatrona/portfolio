@@ -17,11 +17,11 @@
 		</a>
 	</h3>
 {:else}
-	<h2 class="heading" class:large={!slug} {id}>
+	<h1 class="headline" {id}>
 		<a {href}>
 			{title}
 		</a>
-	</h2>
+	</h1>
 {/if}
 
 <style>

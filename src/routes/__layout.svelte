@@ -1,59 +1,91 @@
 <script>
 	import { page } from '$app/stores';
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<header>
-	<a href="/"><h1 class:small={$page.url.pathname !== '/'}>SvelteKit + MDsveX Blog</h1></a>
-</header>
+<Header current={$page.url.pathname} />
 
 <main>
 	<slot />
 </main>
 
-<footer>
-	<p>
-		Copyright &#169; <a href="https://twitter.com/mehdi_vasigh">Mehdi Vasigh</a>, {new Date().getFullYear()}
-	</p>
-</footer>
+<Footer />
 
 <style>
 	:global(:root) {
+		--font-size: 18px;
 		--spacing-unit: 4px;
-		--color-background: #e5e5e5;
-		--color-text-primary: #212121;
-		--color-text-secondary: #5a5a5a;
+		--sidebar: 200px;
+		--color-background: 249, 249, 249; /* #f9f9f9 */
+		--color-text-primary: 0, 0, 0; /* #212121 */
+	}
+	@media screen and (prefers-color-scheme: dark) {
+		:global(:root) {
+			--color-background: 17, 17, 17; /* #111 */
+			--color-text-primary: 208, 208, 208; /* #212121 */
+		}
+	}
+
+	@media screen and (min-width: 860px) {
+		:global(:root) {
+			--font-size: 20px;
+		}
+	}
+
+	:global(html) {
+		font-size: var(--font-size);
+		line-height: 1.5;
 	}
 
 	:global(body) {
-		margin: 0 auto;
-		max-width: 75ch;
-		padding: calc(var(--spacing-unit) * 8);
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-			'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+		margin: 0;
+		font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Roboto','Helvetica Neue', sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 
-		background-color: var(--color-background);
-		color: var(--color-text-primary);
-		line-height: 1.51;
-		font-size: 18px;
+		background-color: rgb(var(--color-background));
+		color: rgb(var(--color-text-primary));
 	}
-
-	:global(a, a:visited, a:active) {
-		text-decoration: none;
-		color: var(--color-text-primary);
-		font-weight: 700;
-	}
-
-	:global(a:hover) {
-		text-decoration: underline;
-	}
-
-	.small {
+	:global(.headline){
 		font-size: 1.6rem;
 	}
+	:global(h1, h2) {
+		font-weight: 300;
+	}
+	:global(h3, h4, h5, h6) {
+		font-weight: 400;
+	}
 
-	footer {
-		margin-top: calc(var(--spacing-unit) * 8);
+	:global(a) {
+		display: inline-block;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	:global(a:hover, a:active, #nav-button_label:hover, #nav-button_label:active) {
+		border-radius: 2px;
+		background-color: rgba(var(--color-text-primary), 0.1);
+		box-shadow: 0 0 0 3px rgba(var(--color-text-primary), 0.1);
+	}
+
+	:global(.external) {
+		cursor: alias;
+	}
+
+	:global(.container) {
+		padding: 1.2rem;
+	}
+
+	@media screen and (min-width: 860px) {
+		:global(.headline){
+			font-size: 4.5vw;
+		}
+		:global(.container) {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 932px;
+			width: calc(100vw - 96px);
+		}
 	}
 </style>

@@ -27,18 +27,14 @@
 
 <PageHead title="Home" description="An awesome blog about development with Svelte" />
 
-<p>
-	This is a minimalistic example of a blog built with <a href="https://kit.svelte.dev">SvelteKit</a>
-	and <a href="https://mdsvex.com/">MDsveX</a>.
-	<a href="https://github.com/mvasigh/sveltekit-mdsvex-blog">View source code on Github.</a>
-</p>
+<div class="container">
+	{#each posts as { slug, title, author, description, date }}
+		<Article>
+			<ArticleTitle {slug} {title} />
+			<ArticleMeta {author} {date} />
+			<ArticleDescription {description} {slug} />
+		</Article>
+	{/each}
 
-{#each posts as { slug, title, author, description, date }}
-	<Article>
-		<ArticleTitle {slug} {title} />
-		<ArticleMeta {author} {date} />
-		<ArticleDescription {description} {slug} />
-	</Article>
-{/each}
-
-<slot />
+	<slot />
+</div>

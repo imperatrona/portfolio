@@ -5,23 +5,19 @@
 	const formattedDate = new Date(date).toDateString();
 </script>
 
-<p>
+<div class="meta">
 	<span class="author">{author}</span>
 	<span class="date">{formattedDate}</span>
-</p>
+</div>
 
 <style>
-  p {
-    margin: 0;
-    margin-bottom: calc(var(--spacing-unit) * 4);
-  }
-
-	.author {
-    font-weight: bold;
-		margin-right: calc(var(--spacing-unit) * 2);
+	.meta{
+		display: flex;
+		gap: .4rem;
+		font-size: .9em;
 	}
 
 	.date {
-		color: var(--color-text-secondary);
+		color: rgba(var(--color-text-primary), .55);
 	}
 </style>

@@ -3,7 +3,7 @@
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ url, fetch }) {
-		const post = await fetch(`${url.pathname}.json`).then(res => res.json());
+		const post = await fetch(`${url.pathname}.json`).then((res) => res.json());
 
 		if (!post || !post.published) {
 			return {
@@ -30,7 +30,27 @@
 
 <PageHead title={post.title} description={post.description} />
 
-<ArticleTitle title={post.title} />
-<ArticleMeta author={post.author} date={post.date} />
+<div class="container">
+	<div class="box">
+		<ArticleTitle title={post.title} />
+		<ArticleMeta author={post.author} date={post.date} />
+	</div>
 
-<slot />
+	<div class="body">
+		<slot />
+	</div>
+</div>
+
+<style>
+	@media screen and (min-width: 860px) {
+		/*.box {
+			max-width: calc(100% - var(--sidebar) - 1.2rem);
+			margin-left: auto;
+		}*/
+
+		:global(.body > *) {
+			max-width: calc(100% - var(--sidebar) - 1.2rem);
+/*			margin-left: auto;*/
+		}
+	}
+</style>
