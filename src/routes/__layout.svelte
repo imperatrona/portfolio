@@ -1,10 +1,10 @@
 <script>
 	import { page } from '$app/stores';
-	import Header from '$lib/components/Header.svelte';
+	import HeaderSlim from '$lib/components/HeaderSlim.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<Header current={$page.url.pathname} />
+<HeaderSlim current={$page.url.pathname} />
 
 <main>
 	<slot />
