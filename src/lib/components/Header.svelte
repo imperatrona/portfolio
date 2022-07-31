@@ -2,36 +2,41 @@
 	import SplitChar from './SplitChar.svelte';
 
 	export let current;
+	let toggle = false;
+
+	function handleLink(){
+		toggle = false;
+	}
 </script>
 
 <div class="header">
 	<div class="container">
 		<header>
 			<div>
-				<a href="/" class:active={current === '/'}>Alex<br />Tatianovich</a>
+				<a href="/" class:active={current === '/'} on:click={handleLink}>Alex<br />Tatianovich</a>
 			</div>
-			<input type="checkbox" id="nav-button" />
+			<input type="checkbox" id="nav-button" bind:checked={toggle} />
 			<label for="nav-button" id="nav-button_label">
 				<span aria-hidden="true" />
 				<span aria-hidden="true" />
 			</label>
 			<nav>
 				<ol>
-					<li><a href="/blog" class:active={current === '/blog'}><SplitChar text="Blog" /></a></li>
+					<li><a href="/blog" class:active={current === '/blog'} on:click={handleLink}><SplitChar text="Blog" /></a></li>
 					<li>
-						<a href="/about" class:active={current === '/about'}
+						<a href="/about" class:active={current === '/about'} on:click={handleLink}
 							><SplitChar text="About" offset={4} /></a
 						>
 					</li>
 					<li>
-						<a href="/telegram" class:active={current === '/telegram'}
+						<a href="/telegram" class:active={current === '/telegram'} on:click={handleLink}
 							><SplitChar text="Telegram" offset={9} /></a
 						>
 					</li>
 				</ol>
 				<ol class="social">
 					<li>
-						<a href="mailto:hi@0h5imw.ru" class="external"
+						<a href="mailto:hi@0h5imw.ru" class="external" on:click={handleLink}
 							><SplitChar text="hi@0h5imw.ru" offset={17} /></a
 						>
 					</li>
