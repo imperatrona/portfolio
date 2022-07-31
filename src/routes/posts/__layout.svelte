@@ -1,4 +1,4 @@
-<script context="module">
+<!-- <script context="module">
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
@@ -43,14 +43,16 @@
 
 <style>
 	@media screen and (min-width: 860px) {
-		/*.box {
-			max-width: calc(100% - var(--sidebar) - 1.2rem);
-			margin-left: auto;
-		}*/
-
 		:global(.body > *) {
 			max-width: calc(100% - var(--sidebar) - 1.2rem);
-/*			margin-left: auto;*/
+		}
+
+		:global(.body > figure){
+			max-width: 100%;
 		}
 	}
 </style>
+ -->
+
+
+<slot />
