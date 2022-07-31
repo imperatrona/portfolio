@@ -13,7 +13,7 @@ export default {
 			remarkGithub,
 			{
 				// Use your own repository
-				repository: 'https://github.com/mvasigh/sveltekit-mdsvex-blog.git'
+				repository: 'https://github.com/jonaaronru/portfolio.git'
 			}
 		],
 		remarkAbbr
@@ -26,5 +26,8 @@ export default {
 				behavior: 'wrap'
 			}
 		]
-	]
+	],
+	layout: {
+		blog: "./src/lib/components/Article.svelte"
+	}
 };

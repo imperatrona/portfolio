@@ -20,6 +20,7 @@
 		--color-background: 249, 249, 249; /* #f9f9f9 */
 		--color-text-primary: 0, 0, 0; /* #212121 */
 	}
+
 	@media screen and (prefers-color-scheme: dark) {
 		:global(:root) {
 			--color-background: 17, 17, 17; /* #111 */
@@ -40,19 +41,18 @@
 
 	:global(body) {
 		margin: 0;
-		font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Roboto','Helvetica Neue', sans-serif;
+		font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 
 		background-color: rgb(var(--color-background));
 		color: rgb(var(--color-text-primary));
 	}
-	:global(.headline){
-		font-size: 1.6rem;
-	}
+
 	:global(h1, h2) {
 		font-weight: 300;
 	}
+
 	:global(h3, h4, h5, h6) {
 		font-weight: 400;
 	}
@@ -77,10 +77,16 @@
 		padding: 1.2rem;
 	}
 
+	:global(img) {
+		max-width: 100%;
+		height: auto;
+	}
+
+	:global(figure) {
+		margin: 1em 0;
+	}
+
 	@media screen and (min-width: 860px) {
-		:global(.headline){
-			font-size: 4.5vw;
-		}
 		:global(.container) {
 			margin-left: auto;
 			margin-right: auto;
