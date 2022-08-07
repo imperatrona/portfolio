@@ -13,7 +13,7 @@
 	<div class="container">
 		<header>
 			<div>
-				<a href="/" class:active={current === '/'} on:click={handleLink}>Alex<br />Tatianovich</a>
+				<a href="/" class:active={current === '/'} sveltekit:prefetch on:click={handleLink}>Alex<br />Tatianovich</a>
 			</div>
 			<input type="checkbox" id="nav-button" bind:checked={toggle} />
 			<label for="nav-button" id="nav-button_label">
@@ -22,14 +22,14 @@
 			</label>
 			<nav>
 				<ol>
-					<li><a href="/blog" class:active={current === '/blog'} on:click={handleLink}><SplitChar text="Blog" /></a></li>
+					<li><a href="/blog" sveltekit:prefetch class:active={current === '/blog'} on:click={handleLink}><SplitChar text="Blog" /></a></li>
 					<li>
-						<a href="/about" class:active={current === '/about'} on:click={handleLink}
+						<a href="/about" sveltekit:prefetch class:active={current === '/about'} on:click={handleLink}
 							><SplitChar text="About" offset={4} /></a
 						>
 					</li>
 					<li>
-						<a href="/telegram" class:active={current === '/telegram'} on:click={handleLink}
+						<a href="/telegram" sveltekit:prefetch class:active={current === '/telegram'} on:click={handleLink}
 							><SplitChar text="Telegram" offset={9} /></a
 						>
 					</li>

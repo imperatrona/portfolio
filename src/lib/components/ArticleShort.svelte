@@ -6,7 +6,7 @@
 
 <article>
 	<h2 class="heading">
-		<a {href}>{post.title}</a>
+		<a {href} sveltekit:prefetch>{post.title}</a>
 	</h2>
 	
 	{#if 'description' in post}

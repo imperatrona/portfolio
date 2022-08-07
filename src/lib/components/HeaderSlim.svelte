@@ -13,7 +13,7 @@
 	<div class="container">
 		<header>
 			<div class="title">
-				<a href="/" class:active={current === '/'} class:handle={toggle} on:click={handleLink}
+				<a href="/" sveltekit:prefetch class:active={current === '/'} class:handle={toggle} on:click={handleLink}
 					>Alex Tatianovich</a
 				>
 			</div>
@@ -25,12 +25,12 @@
 			<nav>
 				<ol>
 					<li>
-						<a href="/resume" class:active={current === '/resume'} on:click={handleLink}
+						<a href="/resume" sveltekit:prefetch class:active={current === '/resume'} on:click={handleLink} 
 							><SplitChar text="Resumé" /></a
 						>
 					</li>
 					<li>
-						<a href="/posts" class:active={current === '/posts'} on:click={handleLink}
+						<a href="/posts" sveltekit:prefetch class:active={current === '/posts'} on:click={handleLink}
 							><SplitChar text="Posts" offset={4} /></a
 						>
 					</li>
