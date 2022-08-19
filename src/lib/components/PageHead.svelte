@@ -2,8 +2,8 @@
 	export let title;
 	export let description;
 
-	const siteTitle = 'SvelteKit + MDsveX Blog';
-	const formattedTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+	const siteTitle = 'Alex Tatianovich';
+	const formattedTitle = title ? `${title} · ${siteTitle}` : siteTitle;
 </script>
 
 <svelte:head>

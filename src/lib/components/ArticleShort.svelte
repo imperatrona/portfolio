@@ -1,7 +1,7 @@
 <script>
 	import Meta from '$lib/components/Meta.svelte'
 	export let post;
-	const href = `/posts/${post.slug}`;
+	const href = `/blog/${post.slug}`;
 </script>
 
 <article>

@@ -7,7 +7,6 @@
 	export let date;
 	export let tags;
 </script>
-
 <PageHead title={title} description={description} />
 
 <div class="container">
@@ -21,9 +20,23 @@
 
 	
 	<Meta {date} {tags} />
+
+	<script src="https://utteranc.es/client.js"
+        repo="jonaaronru/portfolio"
+        issue-term="title"
+		label="💬 Comments"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+	</script>
 </div>
 
 <style>
+	:global(.utterances){
+		margin: 40px 0;
+/*		margin: 40px 0 0 -64px;*/
+		max-width: 100%;
+	}
 	@media screen and (min-width: 860px) {
 		:global(.body > *) {
 			max-width: calc(100% - var(--sidebar) - 1.2rem);
@@ -32,5 +45,11 @@
 		:global(.body > figure){
 			max-width: 100%;
 		}
+
+		:global(.utterances){
+		margin: 40px 0;
+/*		margin: 40px 0 0 -64px;*/
+		max-width: calc(100% - var(--sidebar) - 1.2rem);
+	}
 	}
 </style>

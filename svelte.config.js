@@ -1,4 +1,5 @@
-import adapter from '@sveltejs/adapter-static';
+// import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 import md from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 
@@ -11,7 +12,7 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			default: true,
-			onError: 'continue'
+			entries: ['*']
 		}
 	}
 };

@@ -80,6 +80,7 @@
 	:global(img) {
 		max-width: 100%;
 		height: auto;
+		border-radius: 4px;
 	}
 
 	:global(figure) {

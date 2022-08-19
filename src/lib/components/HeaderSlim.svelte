@@ -30,7 +30,7 @@
 						>
 					</li>
 					<li>
-						<a href="/posts" sveltekit:prefetch class:active={current === '/posts'} on:click={handleLink}
+						<a href="/blog" sveltekit:prefetch class:active={current === '/blog'} on:click={handleLink}
 							><SplitChar text="Posts" offset={4} /></a
 						>
 					</li>

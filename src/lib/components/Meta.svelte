@@ -14,7 +14,7 @@
 	{#if tags.length !== 0}
 		<div class="tags">
 			{#each tags as tag}
-				<a href="/posts/tags/{tag}">{tag}</a>
+				<a href="/tags/{tag}">{tag}</a>
 			{/each}
 		</div>
 	{/if}

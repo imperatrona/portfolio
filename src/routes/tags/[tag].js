@@ -1,4 +1,4 @@
-import {posts} from './../_posts'
+import { posts } from '../posts/_posts';
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function GET({ url, params }) {
@@ -8,6 +8,8 @@ export async function GET({ url, params }) {
 		}
 		return false
 	});
+
+	console.log(filterPosts)
 
 	if (filterPosts.length < 1) {
 		return{

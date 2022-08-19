@@ -4,6 +4,11 @@ import { imagetools } from 'vite-imagetools';
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [sveltekit(), imagetools()],
+	server: {
+		fs: {
+			allow: ['./']
+		}
+	}
 };
 
 export default config;
