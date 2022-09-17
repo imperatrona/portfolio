@@ -1,18 +1,19 @@
 {
-  "about": "About",
-  "archive": "Archive",
-  "blog": "Blog",
-  "button": {
-    "contact": "Contact me"
-  },
-  "fullname": "Valentina Botvina",
-  "home": "Home",
-  "location": "Tbilisi, Georgia",
-  "posts": "Posts",
-  "selected": {
-    "projects": "Selected projects"
-  },
-  "status": {
-    "online": "Online"
-  }
+	"title": "Valentina",
+	"about": "About",
+	"archive": "Archive",
+	"blog": "Blog",
+	"button": {
+		"contact": "Contact me"
+	},
+	"fullname": "Valentina Botvina",
+	"home": "Home",
+	"location": "Tbilisi, Georgia",
+	"posts": "Posts",
+	"selected": {
+		"projects": "Selected projects"
+	},
+	"status": {
+		"online": "Online"
+	}
 }
