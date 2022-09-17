@@ -50,7 +50,7 @@
 
 	@media (min-width: 850px) {
 		h1 {
-			font-size: 80px;
+			font-size: 7vw;
 		}
 		.project {
 			margin: 0 auto;

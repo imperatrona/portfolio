@@ -15,7 +15,7 @@
 		<a href={($locale == defaultLocale ? '' : `/${$locale}`) + '/blog'}>{$t('common.blog')}</a>
 	</div>
 	<LanguageSwitcher />
-	<PrimaryButton text={'✶ ' + $t('common.button.contact')} />
+	<PrimaryButton text={$t('common.button.contact')} />
 </div>
 
 <style>
@@ -27,7 +27,7 @@
 	.box {
 		display: flex;
 		align-items: center;
-		gap: 32px;
+		gap: 24px;
 
 		margin: 0 auto;
 		padding: 1.2rem;

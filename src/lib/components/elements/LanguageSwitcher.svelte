@@ -38,9 +38,10 @@
 				href={lang === defaultLocale ? $route : `/${lang}${$route !== '/' ? $route : ''}`}
 				on:click={({ target }) => {
 					loaded = true;
+					let { width } = target.getBoundingClientRect();
 					coords.set({
 						height: target.offsetHeight,
-						width: Math.floor(target.offsetWidth),
+						width: Math.floor(width),
 						top: target.offsetTop,
 						left: target.offsetLeft
 					});
@@ -55,7 +56,7 @@
 		display: flex;
 		padding: 0.2em;
 		border-radius: 100px;
-		box-shadow: 0px 0px 0px 1px rgba(var(--color-text-primary), 0.05) inset;
+		border: 1px solid rgba(var(--color-text-primary), 0.08);
 		position: relative;
 	}
 
@@ -68,15 +69,16 @@
 	.loaded .pointer {
 		background-color: rgb(var(--color-background-lift));
 		border-radius: 100px;
+		border: 1px solid rgba(var(--color-text-primary), 0.05);
 	}
 
 	.btn {
 		cursor: default;
 		position: relative;
 		border-radius: 100px;
-		border: 0;
+		border: 1px solid transparent;
 		border-radius: 100px;
-		padding: 0.667em 1.112em;
+		padding: 0.5rem 1rem;
 		background-color: inherit;
 		line-height: 1em;
 
@@ -93,6 +95,8 @@
 
 	.active {
 		background-color: rgb(var(--color-background-lift));
+		border: 1px solid rgba(var(--color-text-primary), 0.05);
+		/* border: 1px solid #1c1c1c; */
 	}
 
 	.btn:hover {

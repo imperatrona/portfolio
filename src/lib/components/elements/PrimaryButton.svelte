@@ -21,13 +21,16 @@
 
 		overflow: hidden;
 		border-radius: 100px;
-		padding: 16px 24px;
-		font-size: 0.9rem;
+		font-size: 1.05rem;
+		padding: 0.725rem 1.2rem;
+		line-height: 1em;
 
 		transition: transform ease-in-out 0.2s;
 		box-shadow: 0px 0px 0px 1px #ffffff0d inset;
 
-		min-width: 160px;
+		min-width: 156px;
+
+		color: rgb(var(--color-text-primary));
 	}
 
 	.glow > span {
