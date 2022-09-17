@@ -71,9 +71,11 @@
 	}
 
 	.btn {
+		cursor: default;
 		position: relative;
 		border-radius: 100px;
 		border: 0;
+		border-radius: 100px;
 		padding: 0.667em 1.112em;
 		background-color: inherit;
 		line-height: 1em;
@@ -91,7 +93,10 @@
 
 	.active {
 		background-color: rgb(var(--color-background-lift));
-		border-radius: 100px;
+	}
+
+	.btn:hover {
+		background-color: rgba(var(--color-background-lift), 0.4);
 	}
 
 	@media (max-width: 860px) {
