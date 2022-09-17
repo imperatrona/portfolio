@@ -60,3 +60,4 @@ fields:
   label: Tags
 pages:
 - posts/index.md
+- posts/some-post/hello.md
