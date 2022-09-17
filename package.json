@@ -28,6 +28,7 @@
     "@sveltejs/adapter-auto": "^1.0.0-next.64",
     "mdsvex": "^0.10.6",
     "node-html-parser": "^5.3.3",
-    "reading-time": "^1.5.0"
+    "reading-time": "^1.5.0",
+    "sveltekit-i18n": "^2.2.2"
   }
 }
