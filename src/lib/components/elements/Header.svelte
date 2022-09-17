@@ -50,7 +50,6 @@
 		.box {
 			margin: 16px auto;
 			width: calc(100vw - 96px);
-			max-width: 1080px;
 		}
 	}
 </style>

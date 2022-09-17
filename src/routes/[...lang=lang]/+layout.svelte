@@ -108,7 +108,6 @@
 		:global(.container) {
 			margin-left: auto;
 			margin-right: auto;
-			max-width: 1080px;
 			width: calc(100vw - 96px);
 		}
 	}

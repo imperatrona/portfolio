@@ -29,7 +29,6 @@
 		.project {
 			margin: 0 auto;
 			padding: 0 2.2rem;
-			max-width: 1080px;
 		}
 
 		.project .image {
