@@ -8,7 +8,7 @@
 	$: ({ posts } = data);
 </script>
 
-<PageHead title={$page.params.tag} description="Alex Tatianovich blog" />
+<PageHead title={`Tag: ${$page.params.tag}`} description={$t('common.blog.description')} />
 
 <div class="container">
 	<h1><a href="/blog">Posts</a> → {$page.params.tag}</h1>

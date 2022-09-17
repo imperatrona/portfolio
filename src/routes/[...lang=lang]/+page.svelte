@@ -7,7 +7,7 @@
 	import TwitterWidget from '$lib/components/projects/TwitterWidget/index.svelte';
 </script>
 
-<PageHead description="An awesome blog about development with Svelte" />
+<PageHead title={$t('home.title')} description="An awesome blog about development with Svelte" />
 
 <div class="container">
 	<h1>{$t('home.hero')}</h1>

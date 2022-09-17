@@ -1,4 +1,5 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
 	import { t, locale } from '$lib/translations';
 
 	/** @type {import('./$types').PageData} */
@@ -9,9 +10,7 @@
 	$: hasNextPage = posts[posts.length - 1]?.previous;
 </script>
 
-<!-- <svelte:head>
-	<title>Matt Jennings | Blog</title>
-</svelte:head> -->
+<PageHead title={$t('common.posts')} description="Blog" />
 
 <div class="container">
 	<h1>{$t('common.posts')}</h1>
