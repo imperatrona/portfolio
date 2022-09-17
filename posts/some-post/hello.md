@@ -4,7 +4,7 @@ layout: blog
 lang: en
 tags:
 - ux
-title: hello
+title: index
 description: just some random
 published: true
 
