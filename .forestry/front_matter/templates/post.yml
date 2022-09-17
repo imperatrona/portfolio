@@ -59,4 +59,4 @@ fields:
   default: []
   label: Tags
 pages:
-- posts/first-post.md
+- posts/index.md
