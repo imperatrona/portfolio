@@ -1,4 +1,6 @@
-<!-- <script>
+<script>
+	import { shortcut } from "$lib/shortcut";
+
 	export let next;
 	export let prev;
 </script>
@@ -6,9 +8,10 @@
 <nav class="post-nav">
 	<ul>
 		{#if prev}
-			<li>
+			<li class="previous">
 				<a
 					sveltekit:prefetch
+					use:shortcut={{alt: true, code: 'ArrowLeft'}}
 					rel="prev"
 					class="prev-post"
 					href={`/blog/${prev.slug}`}
@@ -18,9 +21,10 @@
 			</li>
 		{/if}
 		{#if next}
-			<li>
+			<li class="next">
 				<a
 					sveltekit:prefetch
+					use:shortcut={{alt: true, code: 'ArrowRight'}}
 					rel="next"
 					class="next-post"
 					href={`/blog/${next.slug}`}
@@ -44,7 +48,8 @@
 		padding: 0;
 	}
 	li {
-		flex: 1;
+/*		flex: 1;*/
+		width: 50%;
 	}
 	a > div {
 		max-width: 24ch;
@@ -57,5 +62,7 @@
 		text-transform: uppercase;
 		margin-bottom: var(--nudge);
 	}
+	.next{
+		margin-left: auto;
+	}
 </style>
- -->
