@@ -26,9 +26,6 @@
 	}
 
 	@media (min-width: 850px) {
-		h1 {
-			font-size: 80px;
-		}
 		.project {
 			margin: 0 auto;
 			padding: 0 2.2rem;
