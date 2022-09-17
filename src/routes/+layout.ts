@@ -1,3 +1,4 @@
+import '../../static/fonts/fonts.css';
 import { get } from 'svelte/store';
 import { redirect } from '@sveltejs/kit';
 import { defaultLocale, locales, loadTranslations } from '$lib/translations';
@@ -9,7 +10,7 @@ export const load: LayoutLoad = async ({ url, params }) => {
 	let lang = defaultLocale;
 
 	const path = pathname.match(/\w+?(?=\/|$)/);
-	if (path){
+	if (path) {
 		const pathLang = get(locales).find((lang) => lang == path);
 		if (pathLang == 'en') {
 			// redirect to path without en
@@ -19,7 +20,7 @@ export const load: LayoutLoad = async ({ url, params }) => {
 		if (pathLang) {
 			const cleanPath = pathname.replace(new RegExp(`^/${pathLang}`), '');
 			route = cleanPath == '' ? '/' : cleanPath;
-			lang = pathLang	
+			lang = pathLang;
 		}
 	}
 

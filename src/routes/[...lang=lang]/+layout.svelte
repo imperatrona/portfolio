@@ -20,8 +20,6 @@
 <Footer />
 
 <style>
-	@import url('/fonts/fonts.css');
-
 	:global(:root) {
 		--font-size: 18px;
 		--spacing-unit: 4px;
