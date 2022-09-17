@@ -19,3 +19,7 @@
 	loading="lazy"
 	alt={alt}>
 </figure>
+
+<style>
+	img{display: block;}
+</style>
