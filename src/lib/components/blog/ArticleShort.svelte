@@ -20,7 +20,7 @@
 		<p class="description">{post.description}</p>
 	{/if}
 
-	<Meta date={post.date} tags={post.tags} />
+	<Meta date={post.date} tags={post.tags} readingTime={post.readingTime} />
 </article>
 
 <style>

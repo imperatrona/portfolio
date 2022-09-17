@@ -1,5 +1,6 @@
 <script>
 	export let date;
+	export let readingTime;
 	export let tags = [];
 </script>
 
@@ -11,6 +12,8 @@
 			day: 'numeric'
 		})}</span
 	>
+	{` · `}
+	<span class="reading-time">{readingTime} min</span>
 	{#if tags !== undefined && tags.length !== 0}
 		{` · `}
 		<div class="tags">

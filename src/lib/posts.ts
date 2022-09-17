@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
 import { parse } from 'node-html-parser';
-import readingTime from 'reading-time';
+import readingTime from '$lib/readingTime';
 
 // we require some server-side APIs to parse all metadata
 if (browser) {
@@ -85,7 +85,7 @@ const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: true })
 			},
 
 			// get estimated reading time for the post
-			readingTime: readingTime(parsedHtml.structuredText).text
+			readingTime: readingTime(parsedHtml.structuredText)
 		};
 	})
 	// sort by date
