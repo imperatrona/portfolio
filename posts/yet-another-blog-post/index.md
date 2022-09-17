@@ -1,9 +1,10 @@
 ---
-title: "Yet another article"
+title: 'Yet another article'
 description: "I know, by now you've probably had enough, but this template looks more full with three posts, and here we are."
-date: "2021-05-05"
+date: '2021-05-05'
 layout: blog
 published: true
+lang: en
 ---
 
 <script>

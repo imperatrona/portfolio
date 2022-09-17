@@ -1,8 +1,11 @@
 ---
-title: "A second blog post"
+title: 'A second blog post'
 description: "The first blog post wasn't enough; I had to come back and write more about Svelte and SvelteKit."
-date: "2021-05-03"
+date: '2021-05-03'
 layout: blog
+published: true
+lang: en
+category: Mind
 ---
 
 <script>
