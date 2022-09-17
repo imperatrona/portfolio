@@ -1,6 +1,5 @@
 <script>
 	import { t, locale } from '$lib/translations';
-	import ArticleShort from '$lib/components/ArticleShort.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;

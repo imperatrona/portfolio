@@ -1,5 +1,5 @@
 <script>
-	import Meta from '$lib/components/Meta.svelte';
+	import Meta from '$lib/components/blog/Meta.svelte';
 	import { locale } from '$lib/translations';
 	export let post;
 </script>

@@ -1,6 +1,6 @@
 <script>
 	import PageHead from '$lib/components/PageHead.svelte';
-	import Meta from '$lib/components/Meta.svelte';
+	import Meta from '$lib/components/blog/Meta.svelte';
 
 	export let title;
 	export let description;

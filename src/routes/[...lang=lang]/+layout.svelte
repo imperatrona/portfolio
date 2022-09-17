@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Footer from '$lib/components/Footer.svelte';
+	import Footer from '$lib/components/elements/Footer.svelte';
 	import Header from '$lib/components/elements/Header.svelte';
 	import { route } from '$lib/stores';
 

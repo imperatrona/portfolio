@@ -1,6 +1,6 @@
 <script>
 	import { t } from '$lib/translations';
-	import ArticleShort from '$lib/components/ArticleShort.svelte';
+	import ArticleShort from '$lib/components/blog/ArticleShort.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
