@@ -5,13 +5,11 @@
 	import Image from '$lib/components/Image.svelte';
 	import HornyThumb from './frame81.png?w=540;1280;2048&webp&meta';
 	import TwitterWidget from '$lib/components/projects/TwitterWidget/index.svelte';
+	import Hero from '$lib/components/Hero.svelte';
 </script>
 
 <PageHead title={$t('home.title')} description="An awesome blog about development with Svelte" />
 
-<div class="container">
-	<h1>{$t('home.hero')}</h1>
-</div>
 <div>
 	<div class="container">
 		<p class="meta">{$t('common.selected.projects')}</p>
