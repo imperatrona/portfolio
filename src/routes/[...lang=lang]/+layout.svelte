@@ -9,23 +9,22 @@
 	$: route.update(() => data.i18n.route);
 </script>
 
-<!-- <HeaderSlim current={$page.url.pathname} /> -->
-
-<Header />
-
-<main>
-	<slot />
-</main>
-
-<Footer />
+<div class="root">
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
+</div>
 
 <style>
 	:global(:root) {
 		--font-size: 18px;
 		--spacing-unit: 4px;
+		--padding: 1.2rem;
 		--sidebar: 200px;
 		--color-background: 240, 240, 240; /* #f9f9f9 */
-		--color-background-lift: 245, 245, 245;
+		--color-background-lift: 245, 245, 245; /* #f5f5f5 */
 		--color-text-primary: 33, 33, 33; /* #212121 */
 	}
 
@@ -106,9 +105,18 @@
 
 	@media screen and (min-width: 860px) {
 		:global(.container) {
-			margin-left: auto;
-			margin-right: auto;
-			width: calc(100vw - 96px);
+			margin: 0 auto;
+		}
+
+		.root {
+			max-width: 1168px;
+			margin: 0 16px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.root {
+			margin: 0 auto;
 		}
 	}
 </style>
