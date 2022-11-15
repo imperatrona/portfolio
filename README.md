@@ -1,6 +1,7 @@
 # My personal blog/portfolio code.
 
-![Screen Shot 2022-09-17 at 16 57 06](https://user-images.githubusercontent.com/37719998/190861342-4dae8c47-e9e4-4787-b5d1-079561b72d04.png)
+![Screenshot of home page design in dark version](https://user-images.githubusercontent.com/37719998/202009996-3eb3e306-0000-4db4-8c48-39c18bee8c3b.png)
+
 
 Assets used:
 
