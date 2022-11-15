@@ -1,12 +1,11 @@
 <script>
-	import WidgetImage from './TwitterWidget/widget.png?w=540;780;1280&format=avif;webp;png&meta';
 	import Image from '$lib/components/Image.svelte';
 	import Project from '$lib/components/Project.svelte';
 </script>
 
 <Project>
 	<div class="image widget">
-		<Image image={WidgetImage} alt="The Ornithologist poster" />
+		<Image src="./TwitterWidget/widget.png" alt="The Ornithologist poster" />
 	</div>
 	<h2>Twitter Widget</h2>
 	<p>Did some code for myself and sharing it with everybody</p>

@@ -12,14 +12,12 @@ tags:
 <script>
   import Counter from '$lib/components/Counter.svelte'
   import Image from '$lib/components/Image.svelte'
-
-  import Screen from './screenshot.png?w=540;1280;2048&webp&meta'
 </script>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque orci nec facilisis iaculis. Sed accumsan placerat dolor. Donec sollicitudin nisi sit amet sodales molestie. Maecenas sit amet dolor nulla. Fusce sed elit et erat consequat dignissim. Nunc eu erat felis. Mauris pretium, arcu eu dapibus tempor, mauris eros tempor tortor, eu tincidunt erat libero sit amet mi. Phasellus eu libero mollis, finibus lacus eget, sollicitudin nulla.
 
 Here's a random Svelte component thrown into my MDsveX markdown:
-<Image image={Screen} alt="Alt" />
+<Image src="./screenshot.png" alt="Alt" />
 
 ## Example heading
 

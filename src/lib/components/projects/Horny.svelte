@@ -1,8 +1,8 @@
 <script>
-	import ProfileImage from './Horny/IMG-02.png?w=540;780;1400&format=avif;webp;png&meta&quality=90';
-	import HomeImage from './Horny/IMG-01.png?w=780;1400:1800&format=avif;webp;png&meta&quality=90';
 	import Image from '$lib/components/Image.svelte';
 	import HeroIcon from './Horny/HeroIcon.svelte';
+
+	export const prerender = true;
 </script>
 
 <div class="project">
@@ -22,11 +22,11 @@
 			</div>
 		</div>
 		<div class="card">
-			<Image image={ProfileImage} alt="Profile" />
+			<Image src="./Horny/IMG-02.png" alt="Profile" />
 		</div>
 	</div>
 	<div class="card">
-		<Image image={HomeImage} alt="The Ornithologist poster" />
+		<Image src="./Horny/IMG-01.png" alt="The Ornithologist poster" />
 	</div>
 </div>
 
