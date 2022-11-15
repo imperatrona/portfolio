@@ -25,6 +25,6 @@
 	.projects {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 24px;
 	}
 </style>
