@@ -12,7 +12,7 @@
 	<h2 class="heading">
 		<a
 			href={post.slug && ($locale == 'en' ? '' : `/${$locale}`) + `/blog/${post.slug}`}
-			sveltekit:prefetch>{post.title}</a
+			data-sveltekit-prefetch>{post.title}</a
 		>
 	</h2>
 
