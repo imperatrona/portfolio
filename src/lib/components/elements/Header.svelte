@@ -4,29 +4,19 @@
 	import LanguageSwitcher from '$lib/components/elements/LanguageSwitcher.svelte';
 </script>
 
-<div class="box">
+<header class="header">
 	<div class="logo">
 		<a class="name" href={$locale == defaultLocale ? '/' : `/${$locale}`}>Valentina</a>
-		<!-- <span class="status">
-			<span class="active" role="presentation">⦁</span> Avaliable
-		</span> -->
-	</div>
-	<div class="blog">
-		<a href={($locale == defaultLocale ? '' : `/${$locale}`) + '/blog'}>{$t('common.blog')}</a>
 	</div>
 	<LanguageSwitcher />
 	<PrimaryButton text={$t('common.button.contact')} />
-</div>
+</header>
 
 <style>
-	@media (max-width: 860px) {
-		.blog {
-			display: none;
-		}
-	}
-	.box {
+	.header {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: 24px;
 
 		margin: 0 auto;
@@ -36,7 +26,7 @@
 	.logo {
 		display: flex;
 		flex-direction: column;
-		margin-right: auto;
+		/* margin-right: auto; */
 	}
 	.name {
 		font-size: 2.2rem;
@@ -47,9 +37,9 @@
 	}
 
 	@media (min-width: 860px) {
-		.box {
-			margin: 16px auto;
-			width: calc(100vw - 96px);
+		.header {
+			margin-top: 16px;
+			/* width: calc(100vw - 96px); */
 		}
 	}
 </style>
