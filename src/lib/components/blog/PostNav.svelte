@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
+	import type { Post } from '$lib/server/posts';
 	import { shortcut } from '$lib/shortcut';
 
-	export let next;
-	export let prev;
+	export let next: Post | undefined;
+	export let prev: Post | undefined;
 </script>
 
 <nav class="post-nav">

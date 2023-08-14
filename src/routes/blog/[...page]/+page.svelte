@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import ArticleShort from '$lib/components/blog/ArticleShort.svelte';
+	import type { PageData } from './$types';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	export let data: PageData;
 	$: ({ posts, page } = data);
 
 	$: isFirstPage = page === 1;

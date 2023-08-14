@@ -1,9 +1,9 @@
 export interface ShortcutParams {
-	alt: boolean;
-	shift: boolean;
-	control: boolean;
-	code: string;
-	callback: () => any;
+	alt?: boolean;
+	shift?: boolean;
+	control?: boolean;
+	code?: string;
+	callback?: () => any;
 }
 export const shortcut = (node: HTMLElement, params: ShortcutParams) => {
 	let handler: (e: KeyboardEvent) => void;

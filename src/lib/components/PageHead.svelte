@@ -1,7 +1,7 @@
-<script>
-	export let title;
-	export let description;
-	let formatedTitle;
+<script lang="ts">
+	export let title: string;
+	export let description: string;
+	let formatedTitle: string;
 	$: formatedTitle = title ? `${title} · Valentina` : 'Valentina';
 </script>
 

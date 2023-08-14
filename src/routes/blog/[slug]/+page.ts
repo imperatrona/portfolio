@@ -1,11 +1,9 @@
 import { error } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
 
-/**
- * @type {import('@sveltejs/kit').PageLoad}
- */
-export async function load({ data: props }) {
+export const load = (async ({ data: props }) => {
 	if (!props.post) {
-		throw error(404, 'Post not found');
+		throw error(404);
 	}
 
 	// load the markdown file based on slug
@@ -18,4 +16,4 @@ export async function load({ data: props }) {
 		post: props.post,
 		component: component.default
 	};
-}
+}) satisfies PageLoad;

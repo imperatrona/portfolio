@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import Article from '$lib/components/blog/Article.svelte';
 	import PostNav from '$lib/components/blog/PostNav.svelte';
+	import type { PageData } from './$types';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	export let data: PageData;
 	$: ({ post, component } = data);
 </script>
 
@@ -13,14 +13,4 @@
 	</Article>
 
 	<PostNav next={post.next} prev={post.previous} />
-
-	<script
-		src="https://utteranc.es/client.js"
-		repo="jonaaronru/portfolio"
-		issue-term="title"
-		label="💬 Comments"
-		theme="preferred-color-scheme"
-		crossorigin="anonymous"
-		async>
-	</script>
 </div>

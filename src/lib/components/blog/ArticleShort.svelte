@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
 	import Meta from '$lib/components/blog/Meta.svelte';
-	export let post;
+	import type { Post } from '$lib/server/posts';
+	export let post: Post;
 </script>
 
 <article>

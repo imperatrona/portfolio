@@ -1,8 +1,8 @@
 import { redirect } from '@sveltejs/kit';
 import { getPosts } from '$lib/server/posts';
+import type { PageServerLoad } from './$types';
 
-/** @type {import('./$types').PageServerLoad} */
-export async function load({ params }) {
+export const load = (async ({ params }) => {
 	let page = 1;
 	let limit = 8;
 
@@ -31,4 +31,4 @@ export async function load({ params }) {
 		page,
 		limit
 	};
-}
+}) satisfies PageServerLoad;

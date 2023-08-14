@@ -1,7 +1,7 @@
-<script>
-	export let date;
-	export let readingTime;
-	export let tags = [];
+<script lang="ts">
+	export let date: string;
+	export let readingTime: number;
+	export let tags: string[] = [];
 </script>
 
 <div class="meta">
@@ -25,9 +25,6 @@
 </div>
 
 <style>
-	/*.date {
-	}*/
-
 	.meta {
 		color: rgba(var(--color-text-primary), 0.55);
 		font-size: 0.8em;
@@ -38,13 +35,10 @@
 		display: flex;
 		gap: 8px;
 	}
-	.tags a {
+	.tags span {
 		text-decoration: underline solid rgba(var(--color-text-primary), 0.2);
 		text-underline-offset: 6px;
 
-		text-decoration: none;
-	}
-	.tags a:hover {
 		text-decoration: none;
 	}
 </style>

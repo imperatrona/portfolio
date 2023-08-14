@@ -1,11 +1,12 @@
 import { getPosts } from '$lib/server/posts';
+import type { PageServerLoad } from './$types';
 
-/** @type {import('./$types').PageServerLoad} */
-export async function load({ params }) {
+export const load = (async ({ params }) => {
 	const { slug } = params;
 
 	// get post with metadata
 	const post = getPosts().find((post) => slug === post.slug);
+	console.log(post);
 
 	return { post };
-}
+}) satisfies PageServerLoad;
