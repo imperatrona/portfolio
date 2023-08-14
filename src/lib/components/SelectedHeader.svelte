@@ -1,5 +1,5 @@
 <div class="container selected">
-	<p class="title">"Selected works"</p>
+	<p class="title">Selected works</p>
 	<p class="years">2015<span>-</span>2022</p>
 </div>
 
