@@ -35,7 +35,7 @@
 		--spacing-unit: 4px;
 		--padding: 1.2rem;
 		--sidebar: 200px;
-		--color-background: 240, 240, 240; /* #f9f9f9 */
+		--color-background: 249, 249, 249; /* #f9f9f9 */
 		--color-background-lift: 245, 245, 245; /* #f5f5f5 */
 		--color-text-primary: 33, 33, 33; /* #212121 */
 	}
@@ -90,18 +90,6 @@
 		font-family: inherit;
 	}
 
-	/* :global(a:hover, a:active, #nav-button_label:hover, #nav-button_label:active) {
-		border-radius: 2px;
-		background-color: rgba(var(--color-text-primary), 0.1);
-		box-shadow: 0 0 0 3px rgba(var(--color-text-primary), 0.1);
-	}
-
-	:global(a.def:hover) {
-		border-radius: inherit;
-		background-color: inherit;
-		box-shadow: inherit;
-	} */
-
 	:global(.external) {
 		cursor: alias;
 	}
@@ -116,11 +104,12 @@
 		margin: 0;
 	}
 
-	@media screen and (min-width: 860px) {
-		.root {
-			max-width: 1200px;
-			margin: 50px auto;
-		}
+	.root {
+		display: flex;
+		flex-direction: column;
+		min-height: calc(100dvh - 100px);
+		margin: 50px auto;
+		max-width: 1200px;
 	}
 
 	/* Progress Bar */

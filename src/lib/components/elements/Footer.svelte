@@ -6,6 +6,6 @@
 
 <style>
 	footer {
-		margin-top: 200px;
+		margin-top: auto;
 	}
 </style>

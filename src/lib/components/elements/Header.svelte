@@ -1,32 +1,67 @@
-<script>
-	import PrimaryButton from '$lib/components/elements/PrimaryButton.svelte';
-</script>
-
 <header class="header">
-	<div class="logo">
-		<a class="name" href="/">Valentina</a>
+	<a class="logo" href="/" title="Home">
+		<img class="avatar" src={'/avatar.jpg'} alt="" height="50" width="50" />
+	</a>
+	<div class="bubble" role="presentation">
+		<span>👋💖🌞</span>
+		<div id="glow" role="presentation" />
 	</div>
 	<a href="/writings">Articles</a>
-	<PrimaryButton text="Contact me" />
 </header>
 
 <style>
 	.header {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		gap: 24px;
+		margin-bottom: 50px;
 	}
 
 	.logo {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		border-radius: 100px;
+		overflow: hidden;
 	}
-	.name {
-		font-size: 2.2rem;
-		font-weight: 400;
-		line-height: 32px;
-		letter-spacing: -0.12em;
-		text-align: left;
+
+	.avatar {
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.logo:hover .avatar {
+		transform: scale(1.04);
+	}
+
+	/* bubble */
+	.bubble {
+		-webkit-mask-image: url(bubble.svg);
+		mask-image: url(bubble.svg);
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		width: 126px;
+		height: 50px;
+
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		user-select: none;
+	}
+
+	.bubble span {
+		font-size: 24px;
+		letter-spacing: 4px;
+		margin-left: 8px;
+		margin-top: 4px;
+	}
+
+	#glow {
+		position: absolute;
+		height: 40px;
+		width: 40px;
+		background-color: #9d22fd;
+		filter: blur(26px);
+		bottom: -40px;
+		left: -13px;
 	}
 </style>
