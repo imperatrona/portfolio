@@ -1,6 +1,29 @@
 import { parse } from 'node-html-parser';
 import readingTime from '$lib/readingTime';
 
+interface MarkdownImport {
+	render: () => RenderFunc;
+	$$render: () => string;
+}
+
+interface RenderFunc {
+	html: string;
+	css: {
+		code: string;
+		map: undefined;
+	};
+	head: string;
+}
+
+interface Metadata {
+	title: string;
+	description: string;
+	date: string;
+	layout: string;
+	published: boolean;
+	tags: string[];
+}
+
 /**
  * Gets all of the posts with added metadata .
  *
@@ -9,10 +32,7 @@ import readingTime from '$lib/readingTime';
  *
  * For getting posts from the client, fetch from the /posts.json endpoint instead
  */
-export function getPosts({
-	page = 1,
-	limit
-}: { page?: number; limit?: number; } = {}) {
+export function getPosts({ page = 1, limit }: { page?: number; limit?: number } = {}) {
 	let res = posts;
 
 	if (res.length > 2) {
@@ -31,49 +51,28 @@ export function getPosts({
 }
 
 // Get all posts and add metadata
-const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: true }))
+export const posts = Object.entries<{ default: MarkdownImport; metadata: Metadata }>(
+	import.meta.glob('/posts/**/*.md', { eager: true })
+)
 	.map(([filepath, post]) => {
+		const parsedHtml = parse(post.default.render().html);
+		const preview = parsedHtml.querySelector('p');
+		const slug = filepath
+			.replace(/(\/index)?\.md/, '')
+			.split('/')
+			.pop();
+
 		return {
 			...post.metadata,
-
-			// generate the slug from the file path
-			slug: filepath
-				.replace(/(\/index)?\.md/, '')
-				.split('/')
-				.pop(),
-
-			// whether or not this file is `my-post.md` or `my-post/index.md`
-			// (needed to do correct dynamic import in posts/[slug].svelte)
+			slug,
 			isIndexFile: filepath.endsWith('/index.md'),
-
-			// remove timezone from date
-			date: post.metadata.date ? new Date(post.metadata.date).toLocaleDateString() : undefined,
-
-			// the svelte component
-			component: post.default
-		};
-	})
-	// Filter only published
-	.filter((post) => post.published === true)
-	// parse HTML output for content metadata (preview, reading time, toc)
-	.map((post) => {
-		const parsedHtml = parse(post.component.render().html);
-		// get the first paragaph of the post to use for the preview
-		const preview = parsedHtml.querySelector('p');
-
-		delete post.component;
-
-		return {
-			...post,
+			date: new Date(post.metadata.date).toLocaleDateString(),
+			readingTime: readingTime(parsedHtml.structuredText),
 			preview: {
-				html: preview.toString(),
-				// text-only preview (i.e no html elements), used for SEO
-				text: preview.structuredText
-			},
-
-			// get estimated reading time for the post
-			readingTime: readingTime(parsedHtml.structuredText)
+				html: preview?.toString() ?? '',
+				text: preview?.structuredText ?? ''
+			}
 		};
 	})
-	// sort by date
+	.filter((post) => post.published === true)
 	.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
