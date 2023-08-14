@@ -4,6 +4,8 @@ import { redirect } from '@sveltejs/kit';
 import { defaultLocale, locales, loadTranslations } from '$lib/translations';
 import type { LayoutLoad } from './$types';
 
+export const prerender = true;
+
 export const load: LayoutLoad = async ({ url, params }) => {
 	const { pathname } = url;
 	let route = pathname;

@@ -3,7 +3,6 @@
 	import Header from '$lib/components/elements/Header.svelte';
 	import { route } from '$lib/stores';
 
-	export const prerender = true;
 	export let data;
 
 	$: route.update(() => data.i18n.route);
