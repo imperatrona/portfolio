@@ -1,7 +1,3 @@
-<script>
-	import { t } from '$lib/translations';
-</script>
-
 <footer>
 	<div class="container">
 		<a class="mail" href="mailto:hi@0h5imw.ru" aria-label="hi@0h5imw.ru">
@@ -35,13 +31,13 @@
 		<div class="footer">
 			<p class="copyright meta-block">
 				&#169; {new Date().getFullYear()}
-				<a href="https://twitter.com/0h5imw">{$t('common.fullname')}</a>
+				<a href="https://twitter.com/0h5imw">Valentina Botvina</a>
 			</p>
 			<p class="avialability meta-block">
 				<span class="status">⦁</span>
-				{$t('common.status.online')}
+				Online
 			</p>
-			<p class="location meta-block">{$t('common.location')}</p>
+			<p class="location meta-block">Tbilisi, Georgia</p>
 		</div>
 	</div>
 </footer>

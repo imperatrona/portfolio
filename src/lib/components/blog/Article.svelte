@@ -6,6 +6,7 @@
 	export let description;
 	export let date;
 	export let tags;
+	export let readingTime;
 </script>
 
 <PageHead {title} {description} />
@@ -18,7 +19,7 @@
 		<slot />
 	</div>
 
-	<Meta {date} {tags} />
+	<Meta {date} {tags} {readingTime} />
 	<!-- <script
 		src="https://utteranc.es/client.js"
 		repo="imperatrona/portfolio"

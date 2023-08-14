@@ -18,7 +18,7 @@
 		{` · `}
 		<div class="tags">
 			{#each tags as tag}
-				<a href="/blog/tag/{tag}">{tag}</a>
+				<span>{tag}</span>
 			{/each}
 		</div>
 	{/if}

@@ -28,7 +28,6 @@
 		"mdsvex": "^0.11.0",
 		"node-html-parser": "^6.1.5",
 		"svelte-preprocess-import-assets": "^1.0.1",
-		"sveltekit-i18n": "^2.4.2",
 		"vite-imagetools": "^5.0.7"
 	}
 }

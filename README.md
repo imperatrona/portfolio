@@ -6,7 +6,6 @@ Assets used:
 
 - [Svelte Kit](https://kit.svelte.dev/) – favourite framework of mine.
 - [MdSveX](https://github.com/pngwn/MDsveX) – markdown preprocessor
-- [sveltekit-i18n](https://github.com/sveltekit-i18n/lib) – localizations
 - [Cloudflare Pages](https://pages.cloudflare.com/) - fastest & free hosting for static sites.
 - [sveltekit-mdsvex-blog](https://github.com/mvasigh/sveltekit-mdsvex-blog)
 - [Gravity](https://www.behance.net/gallery/3407691/Gravity-New-free-font-experiment) – Dazzling good grotesque font, with creative common license and cyrillic support.

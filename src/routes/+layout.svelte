@@ -1,11 +1,6 @@
 <script lang="ts">
 	import Footer from '$lib/components/elements/Footer.svelte';
 	import Header from '$lib/components/elements/Header.svelte';
-	import { route } from '$lib/stores';
-
-	export let data;
-
-	$: route.update(() => data.i18n.route);
 </script>
 
 <div class="root">

@@ -4,13 +4,11 @@ description: 'I love to write about Svelte and all the cool things that you can 
 date: '2021-04-21'
 layout: blog
 published: true
-lang: en
 tags:
   - Mind
 ---
 
 <script>
-  import Counter from '$lib/components/Counter.svelte'
   import Image from '$lib/components/Image.svelte'
 </script>
 

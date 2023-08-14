@@ -1,19 +1,11 @@
 <script>
 	import Meta from '$lib/components/blog/Meta.svelte';
-	import { locale } from '$lib/translations';
 	export let post;
 </script>
 
 <article>
-	<!-- {#if 'thumbnail' in post}
-		<img src="~/posts/the-ornithologist/ehS7B0DOTTlAVbJPae54TJybLk1.jpg" />
-	{/if} -->
-
 	<h2 class="heading">
-		<a
-			href={post.slug && ($locale == 'en' ? '' : `/${$locale}`) + `/blog/${post.slug}`}
-			data-sveltekit-prefetch>{post.title}</a
-		>
+		<a href="/blog/{post.slug}" data-sveltekit-prefetch>{post.title}</a>
 	</h2>
 
 	{#if 'description' in post}

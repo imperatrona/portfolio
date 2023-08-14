@@ -1,15 +1,12 @@
 <script>
-	import { t, locale, defaultLocale } from '$lib/translations';
 	import PrimaryButton from '$lib/components/elements/PrimaryButton.svelte';
-	import LanguageSwitcher from '$lib/components/elements/LanguageSwitcher.svelte';
 </script>
 
 <header class="header">
 	<div class="logo">
-		<a class="name" href={$locale == defaultLocale ? '/' : `/${$locale}`}>Valentina</a>
+		<a class="name" href="/">Valentina</a>
 	</div>
-	<LanguageSwitcher />
-	<PrimaryButton text={$t('common.button.contact')} />
+	<PrimaryButton text="Contact me" />
 </header>
 
 <style>

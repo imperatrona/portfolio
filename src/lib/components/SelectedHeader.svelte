@@ -1,9 +1,5 @@
-<script>
-	import { t } from '$lib/translations';
-</script>
-
 <div class="container selected">
-	<p class="title">{$t('common.selected.projects')}</p>
+	<p class="title">"Selected works"</p>
 	<p class="years">2015<span>-</span>2022</p>
 </div>
 

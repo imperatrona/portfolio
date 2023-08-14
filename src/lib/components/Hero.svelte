@@ -1,10 +1,6 @@
-<script>
-	import { t } from '$lib/translations';
-</script>
-
 <div class="hero">
-	<h1 class="hero_title">{$t('home.title')}</h1>
-	<p class="hero_title">{$t('home.hero')}</p>
+	<h1 class="hero_title">Product designer</h1>
+	<p class="hero_title">Helping brands build experience that make users happy</p>
 </div>
 
 <style>

@@ -17,16 +17,9 @@ if (browser) {
  */
 export function getPosts({
 	page = 1,
-	limit,
-	language
-}: { page?: number; limit?: number; language?: string } = {}) {
+	limit
+}: { page?: number; limit?: number; } = {}) {
 	let res = posts;
-
-	if (language) {
-		res = res.filter((post) => {
-			return post.lang === language;
-		});
-	}
 
 	if (res.length > 2) {
 		res = res.map((post, index, allPosts) => ({

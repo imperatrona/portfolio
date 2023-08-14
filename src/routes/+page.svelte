@@ -1,5 +1,4 @@
 <script>
-	import { t } from '$lib/translations';
 	import PageHead from '$lib/components/PageHead.svelte';
 
 	import TwitterWidget from '$lib/components/projects/TwitterWidget.svelte';
@@ -9,7 +8,7 @@
 	import SelectedHeader from '$lib/components/SelectedHeader.svelte';
 </script>
 
-<PageHead title={$t('home.title')} description="An awesome blog about development with Svelte" />
+<PageHead title="Product designer" description="An awesome blog about development with Svelte" />
 
 <div>
 	<Hero />

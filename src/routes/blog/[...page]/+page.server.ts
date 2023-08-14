@@ -19,7 +19,7 @@ export async function load({ params }) {
 		}
 	}
 
-	const posts = getPosts({ limit, page, language: params.lang ? params.lang : 'en' });
+	const posts = getPosts({ limit, page });
 
 	// if page doesn't exist, direct to page 1
 	if (posts.length == 0 && page > 1) {

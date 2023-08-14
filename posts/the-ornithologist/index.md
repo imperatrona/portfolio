@@ -4,7 +4,6 @@ description: 'Ornithologist'
 date: '2022-07-31'
 layout: blog
 published: true
-lang: en
 thumbnail: ehS7B0DOTTlAVbJPae54TJybLk1.jpg
 tags:
   - Movies

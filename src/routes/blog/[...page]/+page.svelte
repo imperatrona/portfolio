@@ -1,5 +1,4 @@
 <script>
-	import { t } from '$lib/translations';
 	import ArticleShort from '$lib/components/blog/ArticleShort.svelte';
 
 	/** @type {import('./$types').PageData} */
@@ -11,7 +10,7 @@
 </script>
 
 <div class="container">
-	<h1>{$t('common.posts')}</h1>
+	<h1>Posts</h1>
 
 	<div class="feed">
 		{#each posts as post}

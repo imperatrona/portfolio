@@ -1,9 +1,5 @@
 <script lang="ts">
-	import { locale, defaultLocale } from '$lib/translations';
-
-	export let href: string;
+	export let href = '';
 </script>
 
-<a href={`${$locale == defaultLocale ? '' + href : '/' + $locale + (href == '/' ? '' : href)}`}
-	><slot /></a
->
+<a {href}><slot /></a>

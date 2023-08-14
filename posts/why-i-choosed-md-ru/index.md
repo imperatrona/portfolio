@@ -4,7 +4,6 @@ description: 'Люблю писать про Svelte и всякие крутые
 date: '2022-08-03'
 layout: blog
 published: true
-lang: ru
 tags:
   - Мысли
 ---
