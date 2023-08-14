@@ -1,6 +1,24 @@
 <script lang="ts">
 	import Footer from '$lib/components/elements/Footer.svelte';
 	import Header from '$lib/components/elements/Header.svelte';
+
+	import { navigating } from '$app/stores';
+	import NProgress from 'nprogress';
+	import 'nprogress/nprogress.css';
+
+	NProgress.configure({
+		minimum: 0.16,
+		showSpinner: false
+	});
+
+	$: {
+		if ($navigating) {
+			NProgress.start();
+		}
+		if (!$navigating) {
+			NProgress.done();
+		}
+	}
 </script>
 
 <div class="root">
@@ -103,5 +121,10 @@
 			max-width: 1200px;
 			margin: 50px auto;
 		}
+	}
+
+	/* Progress Bar */
+	:global(#nprogress .bar) {
+		background: #beacd0;
 	}
 </style>
