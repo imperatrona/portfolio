@@ -1,5 +1,0 @@
-# Font Squirrel Font-face Generator Configuration File
-# Upload this file to the generator to recreate the settings
-# you used to create these fonts.
-
-{"mode":"expert","formats":["ttf","woff2"],"tt_instructor":"keep","fix_gasp":"xy","fix_vertical_metrics":"N","metrics_ascent":"","metrics_descent":"","metrics_linegap":"","add_spaces":"Y","add_hyphens":"Y","fallback":"none","fallback_custom":"100","options_subset":"advanced","subset_range":["lowercase","uppercase","numbers","punctuation","currency","typographics","math","altpunctuation","english","ubasic"],"subset_custom":"\u0439\u0446\u0443\u043a\u0435\u043d\u0433\u0448\u0449\u0437\u0445\u044a\u0444\u044b\u0432\u0430\u043f\u0440\u043e\u043b\u0434\u0436\u044d\u0451\u044f\u0447\u0441\u043c\u0438\u0442\u044c\u0431\u044e\u0419\u0426\u0423\u041a\u0415\u041d\u0413\u0428\u0429\u0417\u0425\u042a\u0424\u042b\u0412\u0410\u041f\u0420\u041e\u041b\u0414\u0416\u042d\u0401\u042f\u0427\u0421\u041c\u0418\u0422\u042c\u0411\u042e\u00bb\u00ab","subset_custom_range":"","subset_ot_features_list":"","style_link":"Y","css_stylesheet":"fonts.css","filename_suffix":"-webfont","spacing_adjustment":"0","rememberme":"Y"}
