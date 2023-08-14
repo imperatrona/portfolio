@@ -14,8 +14,9 @@ const config = {
 					return new URLSearchParams({
 						format: 'avif;webp;' + extension,
 						picture: true,
-						width: '540;780;1400',
-						quality: 90
+						w: '540;780;1400',
+						quality: 90,
+						as: "picture"
 					});
 				}
 				return new URLSearchParams();
