@@ -1,6 +1,6 @@
 # My personal blog/portfolio code.
 
-![Screen Shot 2022-09-17 at 16 57 06](https://user-images.githubusercontent.com/37719998/190861342-4dae8c47-e9e4-4787-b5d1-079561b72d04.png)
+![Screenshot of website](https://user-images.githubusercontent.com/37719998/190861342-4dae8c47-e9e4-4787-b5d1-079561b72d04.png)
 
 ## Assets used:
 
@@ -10,6 +10,10 @@
 - [sveltekit-mdsvex-blog](https://github.com/mvasigh/sveltekit-mdsvex-blog)
 - [Medium Zoom](https://github.com/francoischalifour/medium-zoom) – zooming images as at medium
 - [nprogress](https://github.com/rstacruz/nprogress) - youtube like progress bar
+
+- [vite-plugin-lqip](https://github.com/drwpow/vite-plugin-lqip) - generating blurred placeholders
+- [vite-imagetools](https://github.com/JonasKruckenberg/imagetools/tree/main/packages/vite) - processing images with sharp
+- [svelte-preprocess-import-assets](https://github.com/bluwy/svelte-preprocess-import-assets) - automatically import img src to vite
 
 ## Fonts:
 
