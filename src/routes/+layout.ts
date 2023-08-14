@@ -1,4 +1,3 @@
-import '../../static/fonts/fonts.css';
 import { get } from 'svelte/store';
 import { redirect } from '@sveltejs/kit';
 import { defaultLocale, locales, loadTranslations } from '$lib/translations';
