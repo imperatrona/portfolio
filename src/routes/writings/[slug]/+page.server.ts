@@ -6,7 +6,6 @@ export const load = (async ({ params }) => {
 
 	// get post with metadata
 	const post = getPosts().find((post) => slug === post.slug);
-	console.log(post);
 
 	return { post };
 }) satisfies PageServerLoad;

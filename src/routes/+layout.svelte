@@ -68,6 +68,10 @@
 		text-decoration: none;
 	}
 
+	:global(button) {
+		font-family: inherit;
+	}
+
 	/* :global(a:hover, a:active, #nav-button_label:hover, #nav-button_label:active) {
 		border-radius: 2px;
 		background-color: rgba(var(--color-text-primary), 0.1);
@@ -84,10 +88,6 @@
 		cursor: alias;
 	}
 
-	:global(.container) {
-		padding: 1.2rem;
-	}
-
 	:global(img) {
 		max-width: 100%;
 		height: auto;
@@ -99,19 +99,9 @@
 	}
 
 	@media screen and (min-width: 860px) {
-		:global(.container) {
-			margin: 0 auto;
-		}
-
 		.root {
-			max-width: 1168px;
-			margin: 0 16px;
-		}
-	}
-
-	@media (min-width: 1200px) {
-		.root {
-			margin: 0 auto;
+			max-width: 1200px;
+			margin: 50px auto;
 		}
 	}
 </style>

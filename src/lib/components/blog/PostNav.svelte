@@ -15,7 +15,7 @@
 					use:shortcut={{ alt: true, code: 'ArrowLeft' }}
 					rel="prev"
 					class="prev-post"
-					href={`/blog/${prev.slug}`}
+					href={`/writings/${prev.slug}`}
 					><div class="meta">⌥← Previous</div>
 					<div>{prev.title}</div></a
 				>
@@ -28,7 +28,7 @@
 					use:shortcut={{ alt: true, code: 'ArrowRight' }}
 					rel="next"
 					class="next-post"
-					href={`/blog/${next.slug}`}
+					href={`/writings/${next.slug}`}
 					><div class="meta">Next →⌥</div>
 					<div>{next.title}</div></a
 				>

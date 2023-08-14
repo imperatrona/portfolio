@@ -6,7 +6,7 @@
 
 <article>
 	<h2 class="heading">
-		<a href="/blog/{post.slug}" data-sveltekit-prefetch>{post.title}</a>
+		<a href="/writings/{post.slug}" data-sveltekit-prefetch>{post.title}</a>
 	</h2>
 
 	{#if 'description' in post}

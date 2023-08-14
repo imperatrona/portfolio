@@ -1,9 +1,7 @@
-<div class="container">
-	<h2>
-		<span class="errorCode">404</span>
-		<span class="errorMessage">Page Not Found</span>
-	</h2>
-</div>
+<h2>
+	<span class="errorCode">404</span>
+	<span class="errorMessage">Page Not Found</span>
+</h2>
 
 <style>
 	h2 {

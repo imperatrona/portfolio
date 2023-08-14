@@ -23,7 +23,7 @@ export const load = (async ({ params }) => {
 
 	// if page doesn't exist, direct to page 1
 	if (posts.length == 0 && page > 1) {
-		throw redirect(302, '/blog');
+		throw redirect(302, '/writings');
 	}
 
 	return {

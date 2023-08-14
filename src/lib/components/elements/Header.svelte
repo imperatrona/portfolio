@@ -6,6 +6,7 @@
 	<div class="logo">
 		<a class="name" href="/">Valentina</a>
 	</div>
+	<a href="/writings">Articles</a>
 	<PrimaryButton text="Contact me" />
 </header>
 
@@ -15,15 +16,11 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 24px;
-
-		margin: 0 auto;
-		padding: 1.2rem;
 	}
 
 	.logo {
 		display: flex;
 		flex-direction: column;
-		/* margin-right: auto; */
 	}
 	.name {
 		font-size: 2.2rem;
@@ -31,12 +28,5 @@
 		line-height: 32px;
 		letter-spacing: -0.12em;
 		text-align: left;
-	}
-
-	@media (min-width: 860px) {
-		.header {
-			margin-top: 16px;
-			/* width: calc(100vw - 96px); */
-		}
 	}
 </style>

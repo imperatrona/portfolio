@@ -4,13 +4,10 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	$: ({ post, component } = data);
 </script>
 
-<div class="container">
-	<Article {...post}>
-		<svelte:component this={component} />
-	</Article>
+<Article {...data.post}>
+	<svelte:component this={data.component} />
+</Article>
 
-	<PostNav next={post.next} prev={post.previous} />
-</div>
+<PostNav next={data.post.next} prev={data.post.previous} />
