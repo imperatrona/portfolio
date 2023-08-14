@@ -1,5 +1,4 @@
-// import adapter from '@sveltejs/adapter-static';
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import md from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 import { importAssets } from 'svelte-preprocess-import-assets';

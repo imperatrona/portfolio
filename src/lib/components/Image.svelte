@@ -7,13 +7,18 @@
 		w: string;
 		h?: number;
 	}
-	interface Src {
-		sources: {
-			[key: string]: Image[];
+	interface Source {
+		src: {
+			sources: {
+				[key: string]: Image[];
+			};
+			img: Image;
 		};
-		img: Image;
+		lqip: string;
+		width: number;
+		height: number;
 	}
-	export let src: Src | string;
+	export let src: Source | string;
 	export let alt: string;
 
 	// Medium Zoom
@@ -46,11 +51,45 @@
 	}
 </script>
 
-{#if typeof src !== 'string'}
+{#if typeof src !== 'string' && src.src}
 	<picture>
-		{#each Object.entries(src.sources) as [format, images]}
-			<source srcset={images.map((i) => `${i.src} ${i.w}w`).join(', ')} type={'image/' + format} />
-		{/each}
-		<img src={src.img.src} {alt} use:attachZoom={options} />
+		{#if src.src.sources}
+			{#each Object.entries(src.src.sources) as [format, images]}
+				<source
+					srcset={images.map((i) => `${i.src} ${i.w}w`).join(', ')}
+					type={'image/' + format}
+				/>
+			{/each}
+		{/if}
+		{#if src.lqip && src.src.img}
+			<img
+				src={src.src.img.src}
+				{alt}
+				height={src.height}
+				width={src.width}
+				style="background: url({src.lqip}) no-repeat center/cover"
+				loading="lazy"
+				decoding="async"
+				use:attachZoom={options}
+			/>
+		{/if}
 	</picture>
 {/if}
+
+<!-- {#if typeof src !== 'string' && src.src.sources}
+	<picture>
+		{#each Object.entries(src.src.sources) as [format, images]}
+			<source srcset={images.map((i) => `${i.src} ${i.w}w`).join(', ')} type={'image/' + format} />
+		{/each}
+		<img src={src.src.img.src} {alt} use:attachZoom={options} />
+	</picture>
+{/if} -->
+
+<!-- {#if typeof src !== 'string'}
+	<picture>
+		{#each Object.entries(src.src.sources) as [format, images]}
+			<source srcset={images.map((i) => `${i.src} ${i.w}w`).join(', ')} type={'image/' + format} />
+		{/each}
+		<img src={src.src.img.src} {alt} use:attachZoom={options} />
+	</picture>
+{/if} -->

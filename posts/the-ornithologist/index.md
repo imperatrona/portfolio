@@ -14,6 +14,6 @@ tags:
 	import Image from '$lib/components/Image.svelte'
 </script>
 
-<Image src="./ehS7B0DOTTlAVbJPae54TJybLk1.jpg" alt="The Ornithologist poster" />
+<Image src="./ehS7B0DOTTlAVbJPae54TJybLk1.jpg?lqip" alt="The Ornithologist poster" />
 
 This is an example of an unpublished post! Your site will display a 404 page until you set your `published` flag to `true`.
