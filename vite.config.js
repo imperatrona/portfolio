@@ -14,7 +14,7 @@ const config = {
 				const extension = url.pathname.substring(url.pathname.lastIndexOf('.') + 1);
 				if (supportedExtensions.includes(extension)) {
 					return new URLSearchParams({
-						format: 'avif;webp;' + extension,
+						format: 'webp;' + extension, // 'avif;webp;' + extension,
 						picture: true,
 						w: '540;780;1400',
 						quality: 90,
