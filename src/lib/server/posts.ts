@@ -1,11 +1,5 @@
-import { browser } from '$app/environment';
 import { parse } from 'node-html-parser';
 import readingTime from '$lib/readingTime';
-
-// we require some server-side APIs to parse all metadata
-if (browser) {
-	throw new Error(`get-posts.js should not be used on the browser`);
-}
 
 /**
  * Gets all of the posts with added metadata .

@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import { getPosts } from '$lib/posts';
+import { getPosts } from '$lib/server/posts';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
