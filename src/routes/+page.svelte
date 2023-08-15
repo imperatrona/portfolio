@@ -8,7 +8,7 @@
 	export let data: PageData;
 </script>
 
-<PageHead title="Product designer" description="An awesome blog about development with Svelte" />
+<PageHead title="Software designer" description="Building experience users want to repeat" />
 <Hero />
 {#if data.posts.length > 0}
 	<Feed posts={data.posts} />
