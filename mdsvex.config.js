@@ -27,7 +27,7 @@ export default {
 			}
 		]
 	],
-	layout: {
-		blog: "./src/lib/components/Article.svelte"
-	}
+	// layout: {
+	// 	blog: "./src/lib/components/Article.svelte"
+	// }
 };
