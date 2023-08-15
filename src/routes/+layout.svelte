@@ -71,13 +71,25 @@
 		color: rgb(var(--color-text-primary));
 	}
 
-	:global(h1, h2) {
-		font-weight: 300;
-		letter-spacing: -1px;
-	}
-
 	:global(h3, h4, h5, h6) {
 		font-weight: 400;
+	}
+
+	:global(.h1) {
+		font-size: 64px;
+		font-weight: normal;
+		font-family: 'Gambarino', 'Source Serif 4', serif;
+		line-height: 1.2;
+		letter-spacing: -0.04em;
+		margin: 0;
+
+		max-width: 860px;
+	}
+
+	@media screen and (min-width: 860px) {
+		:global(.h1) {
+			font-size: 80px;
+		}
 	}
 
 	:global(a) {
@@ -105,11 +117,19 @@
 	}
 
 	.root {
+		--padding: 24px;
 		display: flex;
 		flex-direction: column;
-		min-height: calc(100dvh - 100px);
-		margin: 50px auto;
-		max-width: 1200px;
+		min-height: calc(100dvh - calc(var(--padding) * 2));
+		padding: var(--padding);
+	}
+
+	@media screen and (min-width: 860px) {
+		.root {
+			--padding: 50px;
+			margin: 0 auto;
+			max-width: 1200px;
+		}
 	}
 
 	/* Progress Bar */

@@ -1,8 +1,11 @@
-import { redirect } from '@sveltejs/kit';
+import { error, redirect } from '@sveltejs/kit';
 import { getPosts } from '$lib/server/posts';
 import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params }) => {
+	// Temporary throw error cause posts will later be here
+	throw error(404);
+
 	let page = 1;
 	let limit = 8;
 

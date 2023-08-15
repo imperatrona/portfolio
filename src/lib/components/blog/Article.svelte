@@ -12,7 +12,7 @@
 <PageHead {title} {description} />
 <div>
 	<div class="box">
-		<h1 class="title">{title}</h1>
+		<h1 class="title h1">{title}</h1>
 	</div>
 
 	<div class="body">
@@ -23,23 +23,14 @@
 </div>
 
 <style>
-	:global(.utterances) {
-		margin: 40px 0;
-		max-width: 100%;
-	}
 	@media screen and (min-width: 860px) {
 		:global(.body > *) {
-			max-width: calc(100% - var(--sidebar) - 1.2rem);
+			max-width: 860px;
 		}
 
 		:global(.body > figure) {
 			max-width: 100%;
 		}
 
-		:global(.utterances) {
-			margin: 40px 0;
-			/*		margin: 40px 0 0 -64px;*/
-			max-width: calc(100% - var(--sidebar) - 1.2rem);
-		}
 	}
 </style>

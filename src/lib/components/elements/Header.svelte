@@ -6,7 +6,7 @@
 		<span>👋💖🌞</span>
 		<div id="glow" role="presentation" />
 	</div>
-	<a href="/writings">Articles</a>
+	<!-- <a href="/writings">Articles</a> -->
 </header>
 
 <style>
@@ -34,8 +34,8 @@
 
 	/* bubble */
 	.bubble {
-		-webkit-mask-image: url(bubble.svg);
-		mask-image: url(bubble.svg);
+		-webkit-mask-image: url(/bubble.svg);
+		mask-image: url(/bubble.svg);
 		-webkit-mask-repeat: no-repeat;
 		mask-repeat: no-repeat;
 		width: 126px;
@@ -61,7 +61,9 @@
 		width: 40px;
 		background-color: #9d22fd;
 		filter: blur(26px);
-		bottom: -40px;
+		top: 40px;
 		left: -13px;
+		user-select: none;
+		transition: all 0.5s ease-in-out;
 	}
 </style>

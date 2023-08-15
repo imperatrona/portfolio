@@ -32,10 +32,12 @@ interface Metadata {
  *
  * For getting posts from the client, fetch from the /posts.json endpoint instead
  */
-export function getPosts({ page = 1, limit }: { page?: number; limit?: number } = {}): Array<Post & {
-	next?: Post;
-	previous?: Post;
-}> {
+export function getPosts({ page = 1, limit }: { page?: number; limit?: number } = {}): Array<
+	Post & {
+		next?: Post;
+		previous?: Post;
+	}
+> {
 	let res = posts;
 
 	if (res.length > 2) {
@@ -77,7 +79,7 @@ export const posts = Object.entries<{ default: MarkdownImport; metadata: Metadat
 			}
 		};
 	})
-	.filter((post) => post.published === true)
+	.filter((post) => post.published === false)
 	.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export type Post = (typeof posts)[0];
