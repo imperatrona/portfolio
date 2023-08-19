@@ -84,6 +84,13 @@
 		margin: 0;
 
 		max-width: 860px;
+		text-wrap: balance;
+	}
+
+	@media screen and (max-width: 550px) {
+		:global(.h1) {
+			font-size: calc((100vw - 30rem) / 25 + 2rem);
+		}
 	}
 
 	@media screen and (min-width: 860px) {
