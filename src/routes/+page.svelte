@@ -1,10 +1,9 @@
 <script lang="ts">
-	import PageHead from '$lib/components/PageHead.svelte';
-
-	import Hero from '$lib/components/Hero.svelte';
 	import type { PageData } from './$types';
+
+	import PageHead from '$lib/components/PageHead.svelte';
+	import Hero from '$lib/components/Hero.svelte';
 	import Feed from './Feed.svelte';
-	import SplitText from '$lib/components/elements/SplitText.svelte';
 
 	export let data: PageData;
 </script>
