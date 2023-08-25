@@ -28,8 +28,9 @@
 	}
 
 	.char.animated {
-		animation: uprise 0.6s cubic-bezier(0.5, 0, 0.5, 1);
-		animation-delay: calc(10ms * var(--char-index) + 50ms);
+		animation: uprise calc(var(--duration) * 3) cubic-bezier(0.5, 0, 0.5, 1);
+		animation-delay: calc(var(--duration) / 20 * var(--char-index) + var(--duration) / 4);
+		/* 10ms * var(--char-index) + 50ms */
 		animation-fill-mode: both;
 	}
 

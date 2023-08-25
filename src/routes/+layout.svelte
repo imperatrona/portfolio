@@ -38,6 +38,13 @@
 		--color-background: 249, 249, 249; /* #f9f9f9 */
 		--color-background-lift: 245, 245, 245; /* #f5f5f5 */
 		--color-text-primary: 33, 33, 33; /* #212121 */
+		--duration: 0.2s;
+	}
+
+	@media screen and (prefers-reduced-motion) {
+		:global(:root) {
+			--duration: 0s;
+		}
 	}
 
 	@media screen and (prefers-color-scheme: dark) {
