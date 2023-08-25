@@ -7,6 +7,8 @@
 		<img
 			class="bubble-emojies"
 			src={'/vulcan-salute_medium-light-skin-tone_1f596-1f3fc_1f3fc.png'}
+			height="256"
+			width="256"
 			alt=""
 		/>
 		<div id="glow" role="presentation" />
@@ -28,7 +30,7 @@
 		flex-direction: row;
 		border-radius: 100px;
 		overflow: hidden;
-		animation: avatar 0.6s ease-out;
+		animation: avatar calc(var(--duration) * 3) ease-out;
 		animation-fill-mode: both;
 	}
 
@@ -61,8 +63,8 @@
 		padding: 0 14px 0 20px;
 
 		transform-origin: 0% 100%;
-		animation: bubble 0.6s ease-out;
-		animation-delay: 0.2s;
+		animation: bubble calc(var(--duration) * 3) ease-out;
+		animation-delay: var(--duration);
 		animation-fill-mode: both;
 	}
 
